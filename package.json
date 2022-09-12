@@ -28,7 +28,7 @@
     "demo:cjs": "cd ./test/demo && npm run start:cjs",
     "demo:esm": "cd ./test/demo && npm run start:esm",
     "demo:cli": "nwbuild ./** --mode=build --platforms=linux32, linux64 --version=0.67.1",
-    "build": "esbuild src/index.js --bundle --minify --platform=node --outfile=./dist/index.cjs"
+    "build": "esbuild src/index.js --bundle --platform=node --outfile=./dist/index.cjs"
   },
   "devDependencies": {
     "decompress-zip": "^0.3.3",

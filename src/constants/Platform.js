@@ -9,6 +9,7 @@ const Platform = {
   OSX_64: "osx64",
   WIN_32: "win32",
   WIN_64: "win64",
+  OSX_ARM: "osxm1"
 };
 
 Object.freeze(Platform);
