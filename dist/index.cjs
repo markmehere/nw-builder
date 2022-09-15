@@ -5911,14 +5911,12 @@ var import_simple_glob = __toESM(require_api(), 1);
 var checkPkgOptions = (files) => {
   let pkg = {};
   let matches = (0, import_simple_glob.default)(files).filter((x) => x.indexOf("node_modules") === -1);
-  if (matches.length === 0) {
-    console.error("[ ERROR ] package.json not found");
-    process.exit(1);
-  }
+  let packageJsonExists = false;
   matches.forEach((file) => {
-    if (import_path2.default.basename(file) === "package.json") {
+    if (!packageJsonExists && import_path2.default.basename(file) === "package.json") {
       pkg = import_fs2.default.readFileSync(`${file}`, "utf8");
       pkg = JSON.parse(pkg);
+      packageJsonExists = true;
     }
   });
   if (pkg.nwbuild) {
