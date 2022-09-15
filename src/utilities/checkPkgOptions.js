@@ -6,7 +6,7 @@ import Glob from "simple-glob";
 const checkPkgOptions = (files) => {
   let pkg = {};
 
-  let matches = Glob(files).filter(x => x.indexOf("node_modules") === -1);
+  let matches = Glob(files);
 
   let packageJsonExists = false;
 

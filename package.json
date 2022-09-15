@@ -1,13 +1,13 @@
 {
-  "name": "nw-builder",
+  "name": "nw-builder-arm",
   "version": "3.8.3-beta.1",
-  "description": "Build NW.js desktop applications for Mac, Windows and Linux.",
+  "description": "Build NW.js desktop applications for Mac OS X's arm64 architecture.",
   "keywords": [
     "NW.js",
     "Desktop",
     "Application"
   ],
-  "author": "Steffen Müller <steffen@mllrsohn.com>",
+  "author": "Mark Pazolli <pazollim@gmail.com>",
   "license": "MIT",
   "main": "./lib/index.cjs",
   "exports": {

@@ -108,7 +108,7 @@ const Platforms = {
     },
     versionNameTemplate: "v${ version }/${ name }-v${ version }-osx-x64.zip",
   },
-  osxm1: {
+  osxarm: {
     needsZip: false,
     getRunnable: function (version) {
       if (semver.satisfies(version, ">=0.12.0 || ~0.12.0-alpha")) {

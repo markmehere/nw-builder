@@ -5727,7 +5727,7 @@ var Platform = {
   OSX_64: "osx64",
   WIN_32: "win32",
   WIN_64: "win64",
-  OSX_ARM: "osxm1"
+  OSX_ARM: "osxarm"
 };
 Object.freeze(Platform);
 var Platform_default = Platform;
@@ -5840,7 +5840,7 @@ var Platforms = {
     },
     versionNameTemplate: "v${ version }/${ name }-v${ version }-osx-x64.zip"
   },
-  osxm1: {
+  osxarm: {
     needsZip: false,
     getRunnable: function(version) {
       if (import_semver.default.satisfies(version, ">=0.12.0 || ~0.12.0-alpha")) {
@@ -5910,7 +5910,7 @@ var import_path2 = __toESM(require("path"), 1);
 var import_simple_glob = __toESM(require_api(), 1);
 var checkPkgOptions = (files) => {
   let pkg = {};
-  let matches = (0, import_simple_glob.default)(files).filter((x) => x.indexOf("node_modules") === -1);
+  let matches = (0, import_simple_glob.default)(files);
   let packageJsonExists = false;
   matches.forEach((file) => {
     if (!packageJsonExists && import_path2.default.basename(file) === "package.json") {
