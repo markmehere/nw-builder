@@ -42,7 +42,7 @@ const cli = yargs(hideBin(process.argv))
   .option("platforms", {
     type: "array",
     description:
-      "Supported platforms are linux32, linux64, osx32, osx64, win32, win64",
+      "Supported platforms are linux32, linux64, osx32, osx64, osxarm, win32, win64",
     group: "Run API",
     default: detectCurrentPlatform(process),
   })
