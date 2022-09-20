@@ -1,13 +1,13 @@
 {
-  "name": "nw-builder",
+  "name": "nw-builder-arm",
   "version": "3.8.3-beta.1",
-  "description": "Build NW.js desktop applications for Mac, Windows and Linux.",
+  "description": "Build NW.js desktop applications for Mac OS X's arm64 architecture.",
   "keywords": [
     "NW.js",
     "Desktop",
     "Application"
   ],
-  "author": "Steffen Müller <steffen@mllrsohn.com>",
+  "author": "Mark Pazolli <pazollim@gmail.com>",
   "license": "MIT",
   "main": "./lib/index.cjs",
   "exports": {
@@ -28,7 +28,7 @@
     "demo:cjs": "cd ./test/demo && npm run start:cjs",
     "demo:esm": "cd ./test/demo && npm run start:esm",
     "demo:cli": "nwbuild ./** --mode=build --platforms=linux32, linux64 --version=0.67.1",
-    "build": "esbuild src/index.js --bundle --minify --platform=node --outfile=./dist/index.cjs"
+    "build": "esbuild src/index.js --bundle --platform=node --outfile=./dist/index.cjs"
   },
   "devDependencies": {
     "decompress-zip": "^0.3.3",
